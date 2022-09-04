@@ -1,13 +1,17 @@
 asgiref==3.5.2
+dj-database-url==1.0.0
 Django==3.2.14
 django-cors-headers==3.13.0
+django-heroku==0.3.1
 django-heroku-db-utils==0.1.0
 djangorestframework==3.13.1
 gunicorn==20.1.0
 mysql-client==0.0.1
 mysql-connector-python==8.0.29
 mysql-connector-python-dd==2.0.2
+mysqlclient @ file:///C:/Users/hp/PycharmProjects/comment/mysqlclient-1.4.6-cp37-cp37m-win32.whl
 protobuf==4.21.2
+psycopg2==2.9.3
 pytz==2022.1
 sqlparse==0.4.2
 typing_extensions==4.3.0

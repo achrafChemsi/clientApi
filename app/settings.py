@@ -41,7 +41,6 @@ INSTALLED_APPS = [
     'core'
 ]
 
-DEBUG_COLLECTSTATIC = 1
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
