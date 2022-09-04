@@ -20,7 +20,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = os.environ.get("SECRET_KEY")
+SECRET_KEY = "django-insecure-y^*#xu%%1!c74^$rluub61&raztjwih+y55ylnu8s8gp=g)**l"
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
@@ -79,10 +79,17 @@ WSGI_APPLICATION = 'app.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'clientms',
-        'USER': 'root',
-        'PASSWORD': '',
+        'ENGINE': 'mssql',
+        'NAME': 'Clientms',
+        'USER': 'achraf',
+        'PASSWORD': 'Chemsi78963.',
+        'Trusted_Connection': 'no',
+        'HOST': 'achraf-ms.database.windows.net',   # Or an IP Address that your DB is hosted on
+        'PORT': '1433',
+        'OPTIONS': {
+             'driver': 'ODBC Driver 13 for SQL Server',
+             'extra_params': "Authentication=ActiveDirectoryMsi;Encrypt=yes;TrustServerCertificate=no;Connection Timeout=30;"
+        }
     }
 }
 
@@ -115,7 +122,7 @@ USE_I18N = True
 
 USE_L10N = True
 
-USE_TZ = True
+USE_TZ = False
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
